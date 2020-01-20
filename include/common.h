@@ -31,8 +31,18 @@ typedef void Sigfunc(int);  /* signal handlers */
 
 #define max(a, b)   (a) < (b) ? (b) : (a)
 #define min(a, b)   (a) < (b) ? (a) : (b)
-#define DELETE(res) if (res) delete res, res = NULL
-#define FREE(res)   if (res) free(res), res = NULL
+#define SAFE_DELETE(res) do { \
+							if (NULL != res) { \
+								delete res; \
+								res = NULL; \
+							} \
+						} while(0)
+#define SAFE_FREE(res)	do {\
+							if (NULL != res) { \
+								free(res); \
+								res = NULL; \
+							} \
+						} while(0)
 
 #define MAX_LENGTH  4096
 

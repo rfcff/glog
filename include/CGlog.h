@@ -5,10 +5,11 @@
 
 typedef enum log_level
 {
-	LogVerbose = 0;
-	LogDebug = 1;
-	LogInfo = 2;
-	LogCritical = 3;
+	kLogVerbose = 0;
+	kLogDebug = 1;
+	kLogInfo = 2;
+	kLogWarning = 3;
+	kLogCritical = 4;
 }LogLevel;
 
 class CGlog{
