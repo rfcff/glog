@@ -1,6 +1,6 @@
 #include "common.h"
 
-// using namespace std;
+using namespace std;
 
 #include "CGlog.h"
 
