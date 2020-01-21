@@ -13,7 +13,7 @@ typedef enum log_level
 }LogLevel;
 
 class CGlog{
-public:
+ public:
     static void log(const char* fmt, ...);
     static void log(const char* hint, int line, const char* fmt, ...);
 };
